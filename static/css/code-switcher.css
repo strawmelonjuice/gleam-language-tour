@@ -157,7 +157,7 @@
 	.code-switcher>pre {
 		position: absolute;
 		margin-top: 0px;
-		padding-top: calc(var(--gap) * 3);
+		/* padding-top: calc(var(--gap) * 3); */
 		top: 0;
 		transition: height 1000ms ease-in-out, width 1000ms ease-in-out;
 	}
