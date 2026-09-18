@@ -74,6 +74,8 @@
 	@media only screen and (max-width: 600px) {
 		/* Override width to 90% on smaller screens */
 		width: 90%;
+		/* Add some extra padding to the top, so the buttons have enough space to stay above the code and not overlap it. */
+		padding-top: calc(var(--gap) * 3);
 	}
 
 }
