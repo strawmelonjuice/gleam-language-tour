@@ -74,8 +74,6 @@
 	@media only screen and (max-width: 600px) {
 		/* Override width to 90% on smaller screens */
 		width: 90%;
-		/* Add some extra padding to the top, so the buttons have enough space to stay above the code and not overlap it. */
-		padding-top: calc(var(--gap) * 3);
 	}
 
 }
@@ -159,9 +157,13 @@
 	.code-switcher>pre {
 		position: absolute;
 		margin-top: 0px;
-		/* padding-top: calc(var(--gap) * 3); */
 		top: 0;
 		transition: height 1000ms ease-in-out, width 1000ms ease-in-out;
+
+		@media only screen and (max-width: 600px) {
+			/* Add some extra padding to the top, so the buttons have enough space to stay above the code and not overlap it. */
+			padding-top: calc(var(--gap) * 3);
+		}
 	}
 
 	/* defines the base state for all span's that have a 'data-switcher-id' attribute associated with them. */
