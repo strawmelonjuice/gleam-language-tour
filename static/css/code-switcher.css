@@ -83,11 +83,17 @@
 	display: none;
 }
 
-/* Visually hide elements that arn't <pre>
+/* Visually hide elements that aren't <pre>
  * I.e. stuff that would interfere with the animation, but should 
  * be kept around for people using screen readers.
  * */
 @media (prefers-reduced-motion: no-preference) {
+
+	/* Setting the height for this animation, only when we are animating */
+	#use-example {
+		height: 9em;
+	}
+
 	.code-switcher> :not(pre) {
 		opacity: 0;
 	}
@@ -138,6 +144,12 @@
 	}
 
 	@media only screen and (min-width: 600px) {
+		#use-animation {
+			/* When animating and on wide screen, the codeblock is using space so efficiently it can now do with only 7 ems! */
+			height: 7em;
+			margin-top: -0.4em;
+		}
+
 		.code-switcher>pre {
 			padding-right: calc(var(--gap) * 15);
 			padding-top: var(--gap);
